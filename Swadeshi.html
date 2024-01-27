@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <title>Order Form</title>
+  </head>
+  <body bgcolor="Violet" topmargin="5">
+    <a href="#Bottom">To Bottom</a>
+    <a href="www.google.com">Google</a>
+    <font face="Arial">
+      <center>
+        <font color="white">
+          <font face="Lucida Handwriting">
+            <h1>Welcome to Swadeshi Co. Pvt. Ltd.</h1>
+          </font>
+          <h4>Please fill the order form</h4>
+        </font>
+      </center>
+      <form action="mailto:satyamrajgaya434@gmail.com">
+        <table>
+          <tr>
+            <td>Name:</td>
+            <td><input type="text" name="Name" /></td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td><input type="email" name="Email" /></td>
+          </tr>
+          <tr>
+            <td>Address:</td>
+            <td><textarea name="Address" cols="30" rows="5"></textarea></td>
+          </tr>
+          <tr>
+            <td>Pincode: &nbsp;</td>
+            <td><input type="text" name="Pincode" /></td>
+          </tr>
+        </table>
+        <br />
+        <br />
+        <table border="2" bgcolor="#afafad">
+          <tr>
+            <th>Product-Name</th>
+            <th>Product-Id</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Total</th>
+          </tr>
+          <tr>
+            <td>Kurta-Pyjama</td>
+            <td>KP</td>
+            <td><input type="number" name="KP" /></td>
+            <td>Rs1500</td>
+            <td><input type="text" value="Rs" /></td>
+          </tr>
+          <tr>
+            <td>Blazer</td>
+            <td>BLZ</td>
+            <td><input type="number" name="BLZ" /></td>
+            <td>Rs3300</td>
+            <td><input type="text" value="Rs" /></td>
+          </tr>
+          <tr>
+            <td>Sweatshirt</td>
+            <td>SWT</td>
+            <td><input type="number" name="SWT" /></td>
+            <td>Rs899</td>
+            <td><input type="text" value="Rs" /></td>
+          </tr>
+          <tr>
+            <td>Nehru-Jacket</td>
+            <td>NHJ</td>
+            <td><input type="number" name="NHJ" /></td>
+            <td>Rs1200</td>
+            <td><input type="text" value="Rs" /></td>
+          </tr>
+          <tr>
+            <td>Shirt</td>
+            <td>SHT</td>
+            <td><input type="number" name="SHT" /></td>
+            <td>Rs1399</td>
+            <td><input type="text" value="Rs" /></td>
+          </tr>
+          <tr>
+            <td colspan="5" align="right">
+              GrandTotal:<input type="text" value="Rs" />
+            </td>
+          </tr>
+        </table>
+        <br /><br />
+        <b>Credit/ Debit Card Details</b><br /><br />
+        Card Type:
+        <table>
+          <tr>
+            <td><input type="radio" name="Card" value="MC" /> Mastercard</td>
+            <td>Card Number: &nbsp;</td>
+            <td><input type="text" name="CN" maxlength="16" /></td>
+          </tr>
+          <tr>
+            <td><input type="radio" name="Card" value="VS" /> Visa</td>
+            <td>Expiry Date:</td>
+            <td>
+              <input
+                type="text"
+                name="Expiry"
+                size="10"
+                value="mm/yy"
+                maxlength="5"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="Card" value="AE" /> American Express
+              &nbsp;
+            </td>
+            <td>CVV:</td>
+            <td><input type="text" name="CVV" size="10" maxlength="3" /></td>
+          </tr>
+          <tr>
+            <th>Delivery Address:</th>
+            <td colspan="2"><textarea cols="30" rows="5"></textarea></td>
+          </tr>
+        </table>
+        <br id="Bottom"/>
+        <input type="submit" value="Send Order" />
+        <input type="reset" value="Clear Form" />
+      </form>
+    </font>
+  </body>
+</html>

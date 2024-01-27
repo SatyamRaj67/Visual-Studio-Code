@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table align="center" border="1" rules="all">
+      <caption>
+        <h2></h2>
+      </caption>
+      <tr>
+        <th><h3>Name</h3></th>
+        <td><input type="text" oninput="getValue()" id="name" /></td>
+        <td rowspan="5" align="center">
+          C = Classic <br />
+          Classic per day rate = 1500 rupees <br />
+          S = Super <br />
+          Super per day rate = 2500 rupees <br />
+          <b
+            >P = Premium <br />
+            Premium per day rate = 5000 rupees
+          </b>
+        </td>
+      </tr>
+      <tr>
+        <th><h3>No. of Days</h3></th>
+        <td>
+          <input type="number" oninput="getValue()" id="days" />
+        </td>
+      </tr>
+      <tr>
+        <th><h3>No. of Rooms</h3></th>
+        <td>
+          <input type="number" oninput="getValue()" id="rooms" />
+        </td>
+      </tr>
+      <tr>
+        <th><h3>Room Class (C/S/P)</h3></th>
+        <td><input type="text" oninput="getValue()" id="class" /></td>
+      </tr>
+      <tr>
+        <th>
+          Total Amount <br />
+          to be paid:
+        </th>
+        <td><span id="result"></span></td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    function getValue() {
+      let name = document.getElementById("name").value.toLowerCase();
+      let days = document.getElementById("days").value;
+      let rooms = document.getElementById("rooms").value;
+      let classes = document.getElementById("class").value.toUpperCase();
+      let result = document.getElementById("result");
+
+      if (name && days && rooms && classes !== "") {
+        penalty = 1;
+        if (name == "sujay") {
+          penalty = Infinity;
+        } else if (name == "satyam") {
+          penalty = 0;
+        }
+
+        if (classes === "P") {
+          cost = 5000;
+        } else if (classes === "S") {
+          cost = 2500;
+        } else if (classes === "C") {
+          cost = 1500;
+        } else if (classes !== "C" || "S" || "P") {
+          result.innerHTML = "Room Class Wrong";
+        }
+        result.innerHTML = "$" + days * rooms * cost * penalty;
+      } else {
+        result.innerHTML = "Please Fill All Info";
+      }
+    }
+  </script>
+</html>
