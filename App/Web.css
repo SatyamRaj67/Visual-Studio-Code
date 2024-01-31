@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    font-display: swap;
     scroll-behavior: smooth;
     transition: all 0.2s;
 }
@@ -334,6 +335,7 @@ p {
 
 .about .content .imgBx img {
     max-width: 100%;
+    height: auto;
 }
 
 .project .content {
